@@ -27,10 +27,10 @@ This function creates a new column `total_obs` which holds the count of rows in 
 
 ```{r, echo=T, eval=FALSE, include=T}
 # Define the function
-total_obs <- function(data) {
-  data <- data %>% 
+total_obs <- function(data_new) {
+  data <- data_new %>% 
     mutate(total_obs = nrow(.))
-  return(data)
+  return(data_new)
 }
 
 # Apply the function to the iris dataset 

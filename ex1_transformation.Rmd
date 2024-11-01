@@ -1,0 +1,26 @@
+---
+title: "ex1_transformation"
+output: html_document
+date: "2024-11-01"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+This function creates a new column `total_var` which holds the count of columns in the dataset
+
+```{r, echo=T, eval=FALSE, include=T}
+# Define the function
+total_var <- function(data) {
+  data <- data %>% 
+    mutate(total_var = ncol(.))
+  return(data)
+}
+
+# Apply the function to the iris dataset 
+total_var(iris)
+```
+
+

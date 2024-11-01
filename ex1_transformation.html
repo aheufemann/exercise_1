@@ -366,6 +366,17 @@ total_var &lt;- function(data) {
 
 # Apply the function to the iris dataset 
 total_var(iris)</code></pre>
+<p>This function creates a new column <code>total_obs</code> which holds
+the count of rows in the dataset</p>
+<pre class="r"><code># Define the function
+total_obs &lt;- function(data) {
+  data &lt;- data %&gt;% 
+    mutate(total_obs = nrow(.))
+  return(data)
+}
+
+# Apply the function to the iris dataset 
+total_obs(iris)</code></pre>
 
 
 

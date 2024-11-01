@@ -23,4 +23,18 @@ total_var <- function(data) {
 total_var(iris)
 ```
 
+This function creates a new column `total_obs` which holds the count of rows in the dataset
+
+```{r, echo=T, eval=FALSE, include=T}
+# Define the function
+total_obs <- function(data) {
+  data <- data %>% 
+    mutate(total_obs = nrow(.))
+  return(data)
+}
+
+# Apply the function to the iris dataset 
+total_obs(iris)
+```
+
 
